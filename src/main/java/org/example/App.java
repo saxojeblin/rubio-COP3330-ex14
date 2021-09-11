@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        double order_amount, tax = 0, total;
+        double order_amount, tax, total;
         String state, strOrderAmount;
         Scanner sc = new Scanner(System.in);
 
@@ -25,8 +25,9 @@ public class App {
         if (state.equals("WI")) {
             tax = .055 * total;
             total += tax;
+            System.out.printf("The subtotal is $%.2f.\nThe tax is $%.2f.\n",order_amount, tax);
         }
 
-        System.out.printf("The subtotal is $%.2f.\nThe tax is $%.2f.\nThe total is $%.2f.",order_amount, tax, total);
+        System.out.printf("The total is $%.2f.", total);
     }
 }
